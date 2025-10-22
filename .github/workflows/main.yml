@@ -34,9 +34,7 @@ jobs:
           Add-Type -AssemblyName System.Security
           $charSet = @{
               Upper   = [char[]](65..90)      # A-Z
-              
-              Number  = [char[]](48..57)      # 0-9
-              
+              Number  = [char[]](48..57)      # 0-9    
           }
           $rawPassword = @()
           $rawPassword += $charSet.Upper | Get-Random -Count 4
